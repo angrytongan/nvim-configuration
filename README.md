@@ -1,0 +1,1 @@
+Somewhat simple nvim configuration.

@@ -14,6 +14,11 @@ vim.o.wildmenu = true
 vim.o.mouse = a
 vim.o.signcolumn = "yes"
 
+-- Temporary fix for flicker using splits. Seems to happen only in markdonw
+-- fils?
+-- https://github.com/neovim/neovim/issues/32660#issuecomment-2692738191
+vim.g._ts_force_sync_parsing = true
+
 -- Commands.
 vim.cmd("syntax enable")
 

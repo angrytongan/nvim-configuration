@@ -13,6 +13,7 @@ vim.o.ruler = true
 vim.o.wildmenu = true
 vim.o.mouse = a
 vim.o.signcolumn = "yes"
+vim.o.ea = false
 
 -- Temporary fix for flicker using splits. Seems to happen only in markdonw
 -- fils?
@@ -47,7 +48,6 @@ cmp.setup({
     { name = "nvim_lsp" },
   },
 })
-
 
 -- Typescript / JavaScript completion
 require("typescript-tools").setup({})

@@ -23,6 +23,10 @@ vim.g._ts_force_sync_parsing = true
 -- Commands.
 vim.cmd("syntax enable")
 
+-- Keep visual selection after indent change.
+vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
+
 -- LSP
 local lspconfig = require("lspconfig")
 

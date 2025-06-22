@@ -14,6 +14,7 @@ vim.o.wildmenu = true
 vim.o.mouse = a
 vim.o.signcolumn = "yes"
 vim.o.ea = false
+vim.opt.clipboard:append("unnamedplus")
 
 -- Temporary fix for flicker using splits. Seems to happen only in markdonw
 -- fils?

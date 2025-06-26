@@ -1,4 +1,5 @@
 require("config.lazy")
+require("config.diminactive").setup()
 
 -- Options.
 vim.o.tabstop = 2
@@ -56,3 +57,6 @@ cmp.setup({
 
 -- Typescript / JavaScript completion
 require("typescript-tools").setup({})
+
+-- Colourscheme.
+vim.cmd.colorscheme("github_dark_high_contrast")

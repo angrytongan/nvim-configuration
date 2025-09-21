@@ -7,20 +7,20 @@ return {
 
           configs.setup({
               ensure_installed = {
-                    "c",
-                    "go",
-                    "html",
-                    "markdown_inline",
-                    "javascript",
-                    "json",
-                    "lua",
-                    "typescript",
-                    "vim",
-                    "vimdoc",
-                },
+                  "c",
+                  "go",
+                  "html",
+                  "markdown_inline",
+                  "javascript",
+                  "json",
+                  "lua",
+                  "typescript",
+                  "vim",
+                  "vimdoc",
+              },
               sync_install = false,
               highlight = { enable = true },
-              indent = { enable = true },
+              indent = { enable = false },
             })
         end
     }

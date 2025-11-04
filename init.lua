@@ -53,3 +53,28 @@ require("typescript-tools").setup({})
 
 -- Colourscheme.
 vim.cmd.colorscheme("github_dark_high_contrast")
+
+-- Open hints.
+vim.o.updatetime = 300
+local lsp_diagnostics_group = vim.api.nvim_create_augroup('GlobalLspDiagnostics', { clear = true })
+
+vim.api.nvim_create_autocmd('LspAttach', {
+	group = lsp_diagnostics_group,
+	pattern = '*',
+	desc = 'Auto show diagnostics on cursor hold',
+
+	callback = function(args)
+		local bufnr = args.bufnr
+
+		vim.api.nvim_create_autocmd('CursorHold', {
+			buffer = bufnr,
+			desc = 'Show diagnostics float on cursor hold',
+			callback = function()
+				vim.diagnostic.open_float(nil, {
+					focusable = false,
+					scope = 'cursor',
+				})
+			end,
+		})
+	end,
+})

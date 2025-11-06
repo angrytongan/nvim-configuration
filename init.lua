@@ -29,6 +29,7 @@ vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
 
 -- Enable gopls
 vim.lsp.enable('gopls')
+vim.lsp.enable('basedpyright')
 
 -- Completion
 local cmp = require("cmp")
